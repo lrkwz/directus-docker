@@ -1,6 +1,9 @@
 FROM php:7.1-apache
 MAINTAINER Kristian Frolund "https://github.com/Froelund"
 
+RUN apt-get update && apt-get install -y \
+  gnupg
+  
 RUN curl -sL https://deb.nodesource.com/setup_9.x | bash -
 RUN apt-get update && apt-get install -y \
   wget \
